@@ -1,7 +1,7 @@
 #! /bin/usr/python3.5
 
 
-import sqlite3, sys, yaml, time
+import sqlite3, sys, time
 
 def create_file( title, description, date, imgs, folder_name, transcription, notes, cursor):
      """
@@ -14,10 +14,10 @@ transcription  : Transcription of the File ( might not be helpful or empty, if t
 notes          : Notes to the file and additional information.
     """
      insertion_cmd = """
-INSERT INTO files VALUES ( ?, ?, ?, ?, ?, ?, ? )
+INSERT INTO files VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
      """
 
-     cursor.execute( insertion_cmd, [ date, description, title, imgs, folder_name, transcription, notes ] )
+     cursor.execute( insertion_cmd, [ date, description, title, imgs, folder_name, transcription, notes, None ] )
 
 def write_all():
 
@@ -62,7 +62,7 @@ Notes:
 {}
             """.format( date, title, description, transcription, folder_name, img, notes )
             )
-        create_file( title, description, date, img, folder_name, transcription, cursor )
+        create_file( title, description, date, img, folder_name, transcription, notes, cursor )
 
         connection.commit()
     try:

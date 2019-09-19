@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ahnen</title>
+
+    <style>
+      p {
+        font-size: 12px;
+        font-family: "Monospace";
+        margin-left: 10%;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-family: "Monospace";
+        text-align: center;
+      }
+      summary {
+        font-weight: bold;
+      }
+      #pages {
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/"> Index </a>
+    <center>
+      <h3> {{ title }} </h3>
+      <h4> Date: {{ date }} </h4>
+    </center>
+
+    <details>
+      <summary> Ordnernamen </summary>
+      <p style="white-space: pre-wrap"> {{ folder_name }} </p>
+    </details>
+
+    <details>
+      <summary> Beschreibung </summary>
+      <p> {{ description }} </p>
+    </details>
+    <details>
+      <summary> Abschrift </summary>
+      {% for title, page in transcription %}
+        <details id="pages">
+          <summary> {{ title }} </summary>
+          <p style="white-space: pre-wrap"> {{ page }} </p>
+        </details>
+      {% endfor %}
+    </details>
+
+    <details>
+      <summary> Notizen </summary>
+      <p> {{ notes }} </p>
+    </details>
+
+    <details>
+      <summary> Fotos </summary>
+      {% for img in imgs %}
+      <img src="/images/{{ img }}" alt="{{ img }}"></img><br>
+      {% endfor %}
+    </details>
+  </body>
+</html>

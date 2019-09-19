@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ahnen</title>
+  </head>
+  <style>
+
+  body {
+    font-size: 12px;
+  }
+
+  </style>
+  <body>
+    <h2> Index </h3>
+      <form action="/search" method="get">
+        <input type="search" name="search">
+        <select name="place">
+          <option value="title" selected>Title</option>
+          <option value="description"> Beschreibung </option>
+          <option value="transcription"> Abschrift </option>
+          <option value="notes"> Notizen </option>
+          <option value="date"> Datum </option>
+          <option value="folder_name"> Ordnernamen </option>
+        </select>
+      </form>
+    {% for id, title, description in results %}
+    <a href="/files/{{ id }}/">
+      <h3> {{ title }} </h3>
+    </a>
+      <p> {{ description }} </p>
+    {% endfor %}
+  </body>
+</html>

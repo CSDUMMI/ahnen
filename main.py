@@ -1,63 +1,91 @@
 #! /bin/usr/python3.5
+from flask import Flask, request, render_template, send_from_directory
+import sqlite3
 
 
-import sqlite3, sys, yaml, time
 
-def create_file( title, description, date, imgs, folder_name, transcription):
-     """
-A file:
-title          : Descriptive title of a file or the actual title of the file
-description    : Description of the file
-img            : Path relative to ./imgs/<img>/ of the scanned file
-folder_name    : Folder to find these in
-transcription  : Transcription of the File ( might not be helpful or empty, if the file is a map or similar ) 
-    """
-     insertion_cmd = """
-INSERT INTO files VALUES ( "{}", "{}", "{}", "{}", "{}", "{}" )
-     """.format( date, description, title, img, folder_name, transcription )
+app         = Flask(__name__, static_folder = 'static', static_url_path = '')
 
-     return insertion_cmd
-    
-if __name__ == '__main__':
+def connect():
+    return sqlite3.connect('ahnen.db')
 
-    connection = sqlite3.connect( 'ahnen.db' )
-    
-    cursor     = connection.cursor()
-
-    for filename in sys.argv[1:]:
-        file_ = open( filename ).read().split("\n")
-        
-        date          = file_.index('%date')
-        title         = file_.index('%title') # Everything after this is the title
-        description   = file_.index('%description')
-        transcription = file_.index('%transcription')
-        folder_name   = file_.index('%folder_name')
-        img           = file_.index('%img')
-
-        date          = '\n'.join( file_[ date+1 : title ] )          # Only the lines of the date
-        title         = '\n'.join( file_[ title+1 : description ] ) 
-        description   = '\n'.join( file_[ description +1 : transcription ] )
-        transcription = '\n'.join( file_[ transcription +1 : folder_name ] )
-        folder_name   = '\n'.join( file_[ folder_name +1 : img ] )
-        img           = '\n'.join( file_[ img +1 : len( file_ ) ] )
-
-        print (
-            """
-Date: 
-{}
-Title: 
-{}
-Description: 
-{}
-Transcription: 
-{}
-Folder Name: 
-{}
-Images: 
-{}
-            """.format( date, title, description, transcription, folder_name, img )
+@app.route("/")
+def index():
+    connection  = connect()
+    cursor      = connection.cursor()
+    query       = "SELECT id, title, description FROM files"
+    cursor.execute ( query )
+    results     = cursor.fetchall()
+    return render_template(
+            "index.html",
+            results = results
             )
-        cursor.execute( create_file( title, description, date, img, folder_name, transcription ) ),
-        connection.commit()
 
-    connection.close()
+@app.route("/files/<id>")
+def file(id):
+    connection      = connect()
+    cursor          = connection.cursor()
+    query           = "SELECT * FROM files WHERE id = ?"
+    cursor.execute( query, [ id ] )
+
+    results = cursor.fetchone()
+
+    if not results:
+        return render_template(
+                    'error.html',
+                    error       = "Not found",
+                    description = "File not found"
+                    )
+    (
+        date,
+        description,
+        title,
+        imgs,
+        folder_name,
+        transcription,
+        notes,
+        id
+    )               = results
+    imgs = imgs.split(';')
+    transcription = transcription.split('%page')
+
+    for page in range( len( transcription ) ):
+        page_text               = transcription[ page ].split('\n')
+        page_title              = page_text[ 0 ]
+        page_text               = '\n'.join( page_text [ 1: ] )
+        transcription[ page ]   = ( page_title, page_text )
+
+    return render_template(
+                            'present_file.html',
+                            date            = date,
+                            description     = description,
+                            title           = title,
+                            imgs            = imgs,
+                            folder_name     = folder_name,
+                            transcription   = transcription,
+                            notes           = notes,
+                            id              = id
+                          )
+
+@app.route("/search")
+def search():
+    places = {
+        "date"          : "date",
+        "description"   : "description",
+        "title"         : "title",
+        "img"           : "img",
+        "folder_name"   : "folder_name",
+        "transcription" : "transcription",
+        "notes"         : "notes"
+    }
+    connection      = connect()
+    cursor          = connection.cursor()
+    search_query    = request.args.get('search')
+    place           = places[ request.args.get('place') ] # ERROR if none of the accepted places
+    query           = "SELECT title, description, id FROM files WHERE {} LIKE ?".format( place )
+    cursor.execute( query, [ "%{}%".format( search_query ) ] )
+    results         = cursor.fetchall()
+    return render_template( 'search.html', results = results, query = search_query )
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")

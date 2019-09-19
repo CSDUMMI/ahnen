@@ -4,11 +4,16 @@ Unknown
 Aus dem Leben von Carl Gutjahr (4)
 nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
 %description
-Carl Gutjahr ist der Großvater von Dieter Gutjahr
-Er lebt von 1836 - 1916.
+Carl Gutjahr lebt von 1836 - 1916.
+Er war Soldat in den Kriegen Preußens
+für die Vormacht im deutschen Bund gegen
+Dänemark und Österreich, sowie im preußisch-französichen
+Krieg von 1870/71, nachdem das deutsche Kaiserreich erklärt wurde.
+Außerdem war er von 1868 Amtsmann ( Bürgermeister ) von Voerde
+bis 1902.
 %transcription
-Aus dem Leben von Carl Gutjahr (4),
-nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
+                  Aus dem Leben von Carl Gutjahr (4),
+          nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
 
 23.08.1836 - geboren in Warstein
       1841 - im 5. Lebensjahr in den Schulunterricht von Lehrer Weber, nach 2
@@ -52,8 +57,9 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
              an der Bergakademie über Mechanik, Integralrechnung, Markscheidekunde
              und Bergrecht gehört.
 
+%page Studium und Vorbereitung auf Krieg.
                                       - 2 -
-                                      
+
 01.10.1860 - Wintersemester 60/61 an der Uni. Berlin über Finanzwissenschaft,
 -1.04.1861   Nationalökonomie, Römisches Recht, Experimentalchemie und Analytik.
 
@@ -104,9 +110,9 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
                als 17-jähriger Kriegsfreiwilliger Ende 1917 ein. Desgleichen
                meldete sich sein jüngster Enkel am Ende des 2.Weltkrieges zu
                diesem Regiment in Wesel.
-             
+%page Österreich-Preußen Krieg
                                        - 3 -
-             
+
              Am 13.7. erhielt die Batterie wiederum Befehl, per Bahn nach Kassel
              abzuziehen, und stiess am 14. in Eisenach zu dem Detachement unter
              dem Befehl des Obersten v.Portzflerroh, der Befehl erhalten hatte,
@@ -148,9 +154,9 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
              volle Gehalt bezahlt hatte, obwohl seit Beendigung des Feldzuges
              der Herr Gutjahr durch Krankheit verhindert war, dem Verein Dienste
              zu leisten", musste er sowohl sein "bisheriges Studium des Berg-,
-             
+%page Amtsmann Voerde und Franko-Preußsichen Krieg von 1970/71
                                        - 4 -
-            
+
              Hütten- und Salinenfaches als auch die in pecuniärer Beziehung sehr
              günstig situierte Privatstellung als Grubendirektor in Iserlohn,
              zu der er vom Kgl.Oberbergamt Dortmund b.a.w. beurlaubt war, aufge-
@@ -167,7 +173,7 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
              bundenen Diensteinkommens von 800 Talern jährlich, wovon 600 Taler
              als Gehalt und 200 Taler als Büreaukosten zu betrachten sind, be-
              traut".
-             
+
 01.10.1868 - Vom Landrastamtsverwalter Surmann in sein Amt eingeführt, hat er
              dieses fast 35 Jahre bis zum 1.1.1903 innegehabt.
 
@@ -187,19 +193,19 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
              wurden.
              Am 25.12.1870 ging es von Köln aus mittels Sonderzug über Saarbrücken
              bis nach Vauteuil, der letzten Eisenbahnstationvor Paris, da jen-
-             seits ein langer Tunnel gesprengt war. Von V. ging es im 
+             seits ein langer Tunnel gesprengt war. Von V. ging es im
              Fussmarch zum Belagerungsort von Villa Coublay bei Versailles,
              woselbst seine Kolonne Standquartier erhielt; später nach Liroy
              und Bondy (?) verlegt.
-             
+
 07.08.1871 - Am 18.7.71 erhielt er vom Oberbefehlshaber der Besatzungsarmee,
              General v.Manteuffel, einen 6-wöchigen Badeurlaub nach Wiesbaden,
              dem unter dem 7.8.71 auf Grund ärztlichen Attestes die Entlassung
              folgte.
 
-             
+%page Heirat, EK II. und deutsches Kaiserreich
                                        - 5 -
-             
+
              Nachdem ihm am 9.3.1871 als "Kommandeur der Munitions-Fuhrpark-
              Kolonne 16 der Belagerungsartillerie der Ost- und Nordfront von
              Paris" das EK II. verliehen worden war, erhielt er am 1.8.71 vom
@@ -221,22 +227,22 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
              ob er "geneigt" sei, im Falle einer Mobilmachung wieder in den
              Dienst zu treten, antwortet er als glücklicher Ehemann dem ihm
              aus dem Krieg bekannten Bezirkskommandeur:
-                     
-                     "Ich habe ein liebes Weibchen genommen,,
-                      deshalb kann ich nicht kommen.
-                      Ich bitte Sie, entschuldigen Sie mich."
-                      
+
+        	        "Ich habe ein liebes Weibchen genommen,,
+        	         deshalb kann ich nicht kommen.
+        	         Ich bitte Sie, entschuldigen Sie mich."
+
 09.02.1884 - Tod seiner ersten Frau Adelheid.
 17.11.1884 - "Differenzen in der Rechnungsführung, die sich aber durch spätere
-             Klarstellung berichtigen liessen, führten dazu, dass der Amtmann
-             Gutjahr am 17.11.1884 von seinem Amt suspendiert wurde. Während
-             der Zeit der Suspendation, die bis 5.2.1887 dauerte, führte der
-             kommissarische Amtsverwalter Schlüter die Amtsgeschäfte. Am 5.2.1887
-             übernahm der Amtmann Gutjahr nach vollständiger Rehabilitierung
-             sein Amt aufs neue, es musste ihm für die Jahre seiner Amtsenthebung
-             sein volles Gehalt nachgezahlt werden." (aus "Das 900-jährige Kirch-
-             spiel Voerde", S.182).
-             
+            	Klarstellung berichtigen liessen, führten dazu, dass der Amtmann
+            	Gutjahr am 17.11.1884 von seinem Amt suspendiert wurde. Während
+            	der Zeit der Suspendation, die bis 5.2.1887 dauerte, führte der
+            	kommissarische Amtsverwalter Schlüter die Amtsgeschäfte. Am 5.2.1887
+            	übernahm der Amtmann Gutjahr nach vollständiger Rehabilitierung
+            	sein Amt aufs neue, es musste ihm für die Jahre seiner Amtsenthebung
+            	sein volles Gehalt nachgezahlt werden." (aus "Das 900-jährige Kirch-
+            	spiel Voerde", S.182).
+
 11.09.1888 - Heirat mit Bertha Hentze.
 11.04.1889 - Dankschreiben Bismarcks für Glückwünsche zum Geburtstag am 1.4.
 1891 -1892 - 1.Vorsitzender des Voerder Kriegervereins, weiterhin von 1897-1907;
@@ -245,9 +251,9 @@ nach Notizen unseres Vaters, Karl-Otto Gutjahr (2)
 
 30.07.1914 - "Und als er seinen alten Säbel, der stets am Kopfende seines Bettes
              stand, durch seinen Jüngsten zum alten Dannert zum Schleifen schickt,
-             
+
                                        - 6 -
-             
+%page 1.WK und Tod.
              da verbreitet es sich wie im Lauffeuer im Dorf: jetzt gibt's Krieg!".
 
 04.08.1914 - Reichstagsrede von W.II.: mit Freude nimmt er die Aussöhnung mit
@@ -265,12 +271,12 @@ Franz Gutjahr
 1797 - 1868
 
 %img
-Carl_Gutjahr/page1.jpg
-Carl_Gutjahr/page2.jpg
-Carl_Gutjahr/page3.jpg
-Carl_Gutjahr/page4.jpg
-Carl_Gutjahr/page5.jpg
-Carl_Gutjahr/page6.jpg
+Carl_Gutjahr/page1.jpg;
+Carl_Gutjahr/page2.jpg;
+Carl_Gutjahr/page3.jpg;
+Carl_Gutjahr/page4.jpg;
+Carl_Gutjahr/page5.jpg;
+Carl_Gutjahr/page6.jpg;
 %notes
 Auch wenn ich so gut wie möglich versucht habe
 auch Grammatik, Zeichensetzung, usw. bezubehalten,
@@ -289,3 +295,4 @@ Außerdem wurden Lehrzeilen eingefügt, um die Lesbarkeit zu verbessern.
 Abkürzungen, die nicht geläufig sind:
 EK      - Eisernes Kreuz
 S.M.    - Seine Majestät
+F.z.S.  -

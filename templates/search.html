@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> {{ query }} </title>
+  </head>
+  <body>
+    <a href="/"> Index </a>
+    <form action="/search" method="get">
+      <input type="search" name="search">
+      <select name="place">
+        <option value="title" selected>Title</option>
+        <option value="description"> Beschreibung </option>
+        <option value="transcription"> Abschrift </option>
+        <option value="notes"> Notizen </option>
+        <option value="date"> Datum </option>
+        <option value="folder_name"> Ordnernamen </option>
+      </select>
+      <input type="submit" value="Suchen">
+    </form>
+
+    {% for title, description, id in results %}
+    <a href="/files/{{ id }}">
+      <h3> {{ title }} </h3>
+      <p> {{ description }} </p>
+    </a>
+    {% endfor %}
+  </body>
+</html>
