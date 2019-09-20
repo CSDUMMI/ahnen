@@ -63,7 +63,10 @@ def file(id):
     )               = results
     imgs = imgs.split(';')
     transcription = transcription.split('%page')
-    transcription.remove('')
+    try:
+        transcription.remove('')
+    except ValueError:
+        pass
     
     for page in range( len( transcription ) ):
         page_text               = transcription[ page ].split('\n')
