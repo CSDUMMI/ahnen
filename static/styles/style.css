@@ -1,0 +1,17 @@
+p {
+    font-size: 12px;
+    font-family: "Courier New", Courier, monospace;
+    margin-left: 10%;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+summary {
+    font-weight: bold;
+}
+#pages {
+    margin-left: 5%;
+}
