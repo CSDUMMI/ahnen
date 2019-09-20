@@ -1,16 +1,11 @@
 #! /bin/usr/python3.5
-from flask import Flask, request, render_template, send_from_directory, redirect, session
-from Crypto.Hash import SHA256
-from Crypto import Random
+from flask import Flask, request, render_template, send_from_directory, redirect
 import sqlite3
 
 
 
-app         = Flask(__name__, static_folder = 'static', static_url_path = '')
+app         = F
 
-entry_key   = "85e4d47325acc8a12308c08b4499319da5866aca9343529d802a1ef7506c2272"
-
-app.secret_key = Random.new().read(16)
 
 def connect():
     return sqlite3.connect('ahnen.db')
@@ -108,24 +103,14 @@ def search():
     results         = cursor.fetchall()
     return render_template( 'search.html', results = results, query = search_query )
 
-@app.route( "/login", methods = [ "GET" ] )
-def login_page():
-    return render_template( 'login.html' )
 
 @app.route( "/login", methods = [ "POST" ] )
 def login():
     if not session.get( 'logged_in' ):
-        key  = request.values.get('key')
+        key  = request.args.get('key')
         hash = SHA256.new()
         hash.update( key.encode( 'utf-8' ) )
-        
-        if hash.hexdigest() == entry_key:
-            session['logged_in'] = True
-        else:
-            session['logged_in'] = False
-            return redirect ( '/login' )
-    
-    return redirect( '/' ) 
+        if hash.
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
